@@ -1,0 +1,8 @@
+rootProject.name = 'spring-cloud-thing'
+include 'eureka-server'
+include 'eureka-client'
+include 'ribbon-server'
+include 'feign-server'
+include 'zuul-server'
+include 'config-server'
+

@@ -1,0 +1,9 @@
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'
+    // 第二版本加入熔断器（hystrix）
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+}
