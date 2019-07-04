@@ -6,4 +6,5 @@ include 'feign-server'
 include 'zuul-server'
 include 'config-server'
 include 'config-client'
+include 'gateway-server'
 
