@@ -1,2 +1,35 @@
 server:
   port: 8026
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+
+#spring:
+#  application:
+#    name: gateway-server
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
+
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lower-case-service-id: true
+      routes:
+      - id: eureka-client
+        uri: lb://EUREKA-CLIENT
+        predicates:
+          - Path=/demo/**
+        filters:
+          - StripPrefix=1
